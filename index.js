@@ -1,13 +1,14 @@
 function Skills() { 
     var skills = [
-        { name: "C++", level: "90%" },
+        { name: "C/C++", level: "90%" },
         { name: "Python", level: "80%" },
-        { name: "Data Structures", level: "65%" },
-        { name: "Algorithms", level: "85%" },
-        { name: "App Development", level: "55%" },
-        { name: "Web Development", level: "65%" },
+        { name: "Assembly", level: "55%" },
+        { name: "Mathematical Analysis", level: "100%" },
+        { name: "Data Structures", level: "80%" },
+        { name: "Web Development", level: "60%" },
         { name: "English - C1", level: "85%" },
-        { name: "French - B2", level: "60%" }
+        { name: "French - B2", level: "60%" },
+        { name: "Sports", level: "100%" },
     ];
 
     var skillsContainer = document.getElementById("skills-container");
@@ -60,5 +61,10 @@ function Click() {
 window.onload = function() {
     Skills();
     typeText();
-    initMinigame();
+
+    const dropdown = document.querySelector(".drop-down");
+    dropdown.style.display = "none";
+    document.querySelector(".button").addEventListener("click", function() {
+      dropdown.style.display = dropdown.style.display === "none" ? "block" : "none";
+    });
 };
